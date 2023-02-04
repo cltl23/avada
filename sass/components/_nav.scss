@@ -1,0 +1,46 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav__logo {
+  margin: 30px;
+}
+
+.nav__hamburger {
+  margin: 30px;
+}
+
+.nav__links {
+  width: 100%;
+  margin: 0px 30px 10px 30px;
+  display: none;
+  font-family: "Roboto Normal";
+  letter-spacing: 0.5px;
+  line-height: 40px;
+  a:hover {
+    color: var(--green);
+  }
+}
+
+.nav__toggle:checked ~ .nav__links {
+  display: block;
+}
+
+// When screen exceeds 890px it will change view to below //
+@include respond-to("medium") {
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__toggle:empty ~ .nav__links {
+    display: block;
+    display: flex;
+    width: auto;
+    li {
+      padding-left: 40px;
+    }
+  }
+}

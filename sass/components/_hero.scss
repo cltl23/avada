@@ -1,0 +1,80 @@
+//Mobile version//
+.hero--bgimg {
+  background-image: url(../../images/bgimg.jpg);
+  background-size: cover;
+  box-shadow: 0 3000px rgba(0, 0, 0, 0.4) inset;
+
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+}
+
+h1 {
+  font-size: 37px;
+  padding: 50px 80px 10px 80px;
+  font-family: "Roboto Slab";
+}
+
+h2 {
+  font-size: 22px;
+  padding: 20px 70px 20px 70px;
+  line-height: 35px;
+}
+
+.hero--btns {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.startedbtn {
+  border: none;
+  padding: 20px;
+  border: none;
+  background-color: var(--green);
+  color: var(--white);
+  font-family: Roboto Medium;
+  font-weight: bold;
+}
+
+.discoverbtn {
+  border: none;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: var(--black);
+  color: var(--white);
+  font-family: Roboto Medium;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+
+// Tablet/Desktop// When exceeds 640px, below will show//
+
+@include respond-to("small") {
+  h1 {
+    font-size: 55px;
+    padding: 60px 150px 10px 150px;
+  }
+
+  h2 {
+    font-size: 22px;
+    padding: 10px 150px 0px 150px;
+  }
+
+  .hero--btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px;
+  }
+
+  .startedbtn {
+    padding: 25px 40px 25px 40px;
+    margin: auto 20px auto auto;
+  }
+  .discoverbtn {
+    padding: 25px 40px 25px 40px;
+    margin: auto auto auto 20px;
+  }
+}
